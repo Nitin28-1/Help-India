@@ -24,13 +24,15 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(urlencoded({extended:true}));
 
-const corsOptions={
+// const corsOptions={
 
-    origin:'http://localhost:5173',
-    credentials: true,  // Allow cookies to be sent
+//     origin:'http://localhost:5173',
+//     credentials: true,  // Allow cookies to be sent
 
- }
-app.use(cors(corsOptions));
+//  }
+// app.use(cors(corsOptions));
+
+app.use(cors());
 
 app.use("/api/v1/user",userRoute);
 app.use("/api/v1/post",postRoute);
